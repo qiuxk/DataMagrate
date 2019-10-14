@@ -3,7 +3,7 @@ server:
 
 
 system:
-  #输入脚本路径
-  outPath: /Users/qiuxk/Desktop/create_tables/
   #输出脚本路径
+  outPath: /Users/qiuxk/Desktop/sql/
+  #输入脚本路径
   inPath: /Users/qiuxk/Desktop/create_tables/
