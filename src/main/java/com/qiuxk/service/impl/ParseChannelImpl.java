@@ -2,6 +2,12 @@ package com.qiuxk.service.impl;
 
 import com.qiuxk.service.ParseFile;
 
+/**
+ *
+ * @author qiuxk
+ * @Description: 渠道表转化
+ * @create 2019/10/15
+ **/
 public class ParseChannelImpl implements ParseFile {
     private final static String  A ="INSERT INTO `tbl_phone_channel`(`channel_id`, `channel_name`, `channel_code`, `shelves_status`, `channel_status`, `up_person`, `create_time`, `up_time`) VALUES";
 

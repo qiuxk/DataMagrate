@@ -22,9 +22,9 @@ public class Test {
     @org.junit.Test
     public  void testData(){
         String inPath  =systemConfigure.getInPath();
-        //readFile.readFile(inPath +"t_phone_order.sql","order");
-        // readFile.readFile(inPath +"t_phone_channel.sql","channel");
-        //readFile.readFile(inPath +"t_phone_operator.sql","operator");
+        readFile.readFile(inPath +"t_phone_order.sql","order");
+        readFile.readFile(inPath +"t_phone_channel.sql","channel");
+        readFile.readFile(inPath +"t_phone_operator.sql","operator");
         readFile.readFile(inPath +"t_phone_package_info.sql","package");
     }
 }

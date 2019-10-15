@@ -4,10 +4,13 @@ import com.qiuxk.service.ParseFile;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+
+/**
+ *
+ * @author qiuxk
+ * @Description: 订单表转化
+ * @create 2019/10/15
+ **/
 
 @Service
 public class ParseFileImpl implements ParseFile {

@@ -2,6 +2,12 @@ package com.qiuxk.service.impl;
 
 import com.qiuxk.service.ParseFile;
 
+/**
+ * 
+ * @author qiuxk
+ * @Description: 运营商转化
+ * @create 2019/10/15
+ **/
 public class ParseOperatorImpl implements ParseFile {
     private final static String  A ="INSERT INTO `tbl_phone_operator`(`operator_id`, `operator_name`, `operator_code`, `shelves_status`, `operator_status`, `channel_id`, `up_person`, `create_time`, `up_time`) VALUES";
 

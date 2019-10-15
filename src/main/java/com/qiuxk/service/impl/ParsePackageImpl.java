@@ -4,6 +4,12 @@ import com.qiuxk.service.ParseFile;
 
 import java.math.BigDecimal;
 
+/**
+ *
+ * @author qiuxk
+ * @Description: 话费包转化
+ * @create 2019/10/15
+ **/
 public class ParsePackageImpl implements ParseFile {
     private final static String  A ="INSERT INTO `tbl_phone_package_info`(`package_id`, `channel_id`, `operator_id`, `province`, `city`, `package_type`, `package_money`, `package_price`, `channel_supply_scale`, `channel_supply_money`, `shelves_status`, `package_status`, `up_person`, `create_time`, `up_time`) VALUES";
 
