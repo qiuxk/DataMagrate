@@ -77,7 +77,7 @@ public class ReadFileImpl implements ReadFile {
             fw = new FileWriter(new File(systemConfigure.getOutPath()+type+".sql"));
               //bw=new BufferedWriter(fw);
                 //解决输出文件中文乱码
-              bw=new BufferedWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(systemConfigure.getOutPath()+type+".sql")), "GBK")));
+              bw=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(systemConfigure.getOutPath()+type+".sql")), "GBK"));
             for (String str : list){
                 bw.write(str+"\t\n");
             }
