@@ -38,7 +38,8 @@ public class ReadFileImpl implements ReadFile {
 
         try {
             File file = new File(path);
-            reader = new BufferedReader(new FileReader(file));
+            //解决输入文件中文乱码
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "gbk"));
             String lineString = null;
             int line = 0;
             int textLine = 0;
@@ -74,9 +75,9 @@ public class ReadFileImpl implements ReadFile {
         BufferedWriter  bw= null;
         try{
             fw = new FileWriter(new File(systemConfigure.getOutPath()+type+".sql"));
-              bw=new BufferedWriter(fw);
-
-            //BufferedWriter  bw=new BufferedWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File("E:/phsftp/evdokey/evdokey_201103221556.txt")), "UTF-8"))
+              //bw=new BufferedWriter(fw);
+                //解决输出文件中文乱码
+              bw=new BufferedWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(systemConfigure.getOutPath()+type+".sql")), "GBK")));
             for (String str : list){
                 bw.write(str+"\t\n");
             }
