@@ -3,6 +3,7 @@ package com.qiuxk.datamagrate;
 import com.qiuxk.service.ReadFile;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 
 import javax.annotation.Resource;
