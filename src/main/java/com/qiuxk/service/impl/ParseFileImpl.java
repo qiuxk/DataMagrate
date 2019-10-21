@@ -24,6 +24,7 @@ public class ParseFileImpl implements ParseFile {
          line=   line.substring(begin,end);
 
         String  returnStr = "";
+        String status ="";
         if(null !=line){
 
 
@@ -72,7 +73,8 @@ public class ParseFileImpl implements ParseFile {
             newArray[17]=oldArray[18];
             newArray[18]=oldArray[19];
             newArray[19]=oldArray[20];
-            newArray[20]=parseOrderStatus(oldArray[21]);
+            //newArray[20]=parseOrderStatus(oldArray[21]);
+
             newArray[21]="020";
             newArray[22]="020";
             //todo 
@@ -96,7 +98,11 @@ public class ParseFileImpl implements ParseFile {
             newArray[36]="02";
             newArray[37]="0";
             newArray[38]="";
-
+            status=oldArray[20]+""+oldArray[21]+""+oldArray[22];
+            newArray[20]=transStatus(status);
+           /*if (status.equals("218")){
+                System.out.println(oldArray[4]);
+            }*/
 
             for(int i =0;i<39;i++){
                 returnStr+="'"+newArray[i]+"',";
@@ -150,5 +156,44 @@ public class ParseFileImpl implements ParseFile {
         }
 
         return  newTime;
+    }
+
+    private String transStatus(String status){
+        String resStr ="";
+        switch (status){
+            case "222":
+                 resStr ="010";
+                 break;
+            case "367":
+                resStr="080";
+                break;
+            case "115":
+                resStr="060";
+                break;
+            case "2112":
+                resStr="041";
+                break;
+            case "213":
+                resStr="020";
+                break;
+             //todo
+            case "165":
+                //退款成功
+                resStr="080";
+                break;
+            case "3510":
+                resStr="070";
+            case "2510":
+                resStr="070";
+                break;
+            case "218":
+                resStr="050";
+                break;
+
+
+        }
+
+        return  resStr;
+
     }
 }

@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DatamagrateApplication.class)
-@EnableConfigurationProperties(SystemProperties.class)
+//@EnableConfigurationProperties(SystemProperties.class)
 public class Test {
 
     @Resource
@@ -27,11 +27,11 @@ public class Test {
 
     @org.junit.Test
     public  void testData(){
-        //System.out.println(systemProperties.getInPath());
+        System.out.println(systemProperties.getInPath());
         String inPath  =systemConfigure.getInPath();
         readFile.readFile(inPath +"t_phone_order.sql","order");
-        readFile.readFile(inPath +"t_phone_channel.sql","channel");
-        readFile.readFile(inPath +"t_phone_operator.sql","operator");
-        readFile.readFile(inPath +"t_phone_package_info.sql","package");
+        //readFile.readFile(inPath +"t_phone_channel.sql","channel");
+        //readFile.readFile(inPath +"t_phone_operator.sql","operator");
+        //readFile.readFile(inPath +"t_phone_package_info.sql","package");
     }
 }
